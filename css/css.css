@@ -1,0 +1,321 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background-image: url(../img/estrellas1.jpg);
+}
+header {
+    width: 100%;
+    height: 57rem;
+    color: whitesmoke;
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Playwrite DK Loopet", cursive;
+}
+
+nav.anclas {
+    width: 100%;
+    height: 6rem;
+    line-height: 6rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(17, 25, 40, 0.75);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: transform 0.5s ease, color 0.5s ease;
+}
+
+.informacion {
+    margin: 0 2rem;
+}
+
+.info {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.info:hover {
+    color: yellow;
+}
+
+.informacion:hover, a:hover {
+    cursor: pointer;
+    transition: 1s;
+    transform: scale(1.1);
+}
+
+h1 {
+    line-height: 57rem;
+    margin: 0;
+}
+hr{
+    border-color: yellow;
+    clear: both;
+}
+
+/* ------------------------ sobre mi ------------------------------------- */
+
+.foto-texto {
+    width: 100%;
+    height: 54rem;
+    margin-top: 3rem;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+figure, p {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    margin: 1rem;
+}
+
+figure {
+    text-align: center;
+}
+
+p {
+    font-size: 1.4rem;
+    padding: 1rem;
+    color: whitesmoke;
+    font-family: 'Playwrite DK Loopet';
+}
+
+.mifoto {
+    width: 80%;
+    height: auto;
+    max-width: 100%;
+    margin-top: 1rem;
+    border-radius: 16px;
+}
+
+/* ------------------------------- trabajos ---------------------------------- */
+
+.galeria{
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    padding-bottom: 3rem;
+}
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: auto;
+}
+.titulo {
+    text-align: center;
+    font-weight: 700;
+    color: whitesmoke;
+    margin-top: 6.5rem;
+    margin-bottom: 5rem;
+    font-size: 2.5rem;
+    letter-spacing: 0.2rem;
+}
+.contenedor-galeria{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.img-galeria {
+    object-fit: cover;
+    width: 30%;
+    display: block;
+    margin-bottom: 15px;
+    box-shadow: 0 0 6px rgb(0, 0, 0, 0.5);
+    cursor: pointer;
+    border-radius: 16px;
+}
+.img-galeria:hover{
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.1);
+}
+.imagen-ampliada{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(100%);
+    transition: transform .2s ease-in-out;
+    z-index: 9999;
+}
+.ver{
+    transform: translate(0);
+}
+.agregar-imagen {
+    object-fit: cover;
+    width: 60%;
+    border-radius: 10px;
+    transform: scale(0);
+    transition: transform .3s .2s;
+}
+.verImg{
+    transform: scale(1);
+}
+.cerrar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    cursor: pointer;
+    color:#fff;
+    font-size: 25px;
+}
+
+/* ---------------------------- cv ------------------------------------ */
+
+.cv {
+    width: 100%;
+    height: 60rem;
+    position: relative;
+    text-align: center;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.cv::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5;
+    z-index: -1;
+}
+.foto, .fotocv{
+    width: 33.33%;
+    height: auto;
+    padding: 10px;
+}
+.foto{
+    margin-top: 5rem;
+    margin-bottom: 3rem;         
+}
+.agrandar{
+    width: 95%;
+    height: auto;
+    border-radius: 16px;
+    margin-top: 8%;
+}
+.agrandar:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+/* ------------------------------- contacto ---------------------------------- */ 
+       
+.contacto {
+    width: 100%;
+    background-color: #333333;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    font-family: "Playwrite DK Loopet", cursive;
+}
+.caja-iconos {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+.iconos{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* ------------------------------- versión movil ---------------------------------- */
+
+@media (max-width: 768px) {
+    header {
+        height: auto;              
+        font-size: 1rem;         
+        padding: 2rem 1rem;        
+    }
+   nav.anclas {
+        height: auto;              
+        line-height: normal;       
+        padding: 1rem 0;           
+    }
+    .informacion{
+        margin: 0;
+    }
+    h1{
+        width: 100%;
+        line-height: 4rem;
+        padding-top: 10rem;
+        padding-bottom: 7rem;
+        text-align: center;
+    }
+
+/*---------------------------------- sobre mi -------------------------------- */
+
+    .foto-texto {
+        height: auto;
+        text-align: justify;
+    }
+    figure, p {
+        width: 90%;              
+        max-width: 90%;          
+        margin: 0.5rem;          
+    }
+    p {
+        font-size: 1rem;         
+        padding: 0.5rem;         
+    }
+    .mifoto {
+        width: 80%;             
+        margin-top: 1rem;        
+    }
+
+/*---------------------------------- trabajos -------------------------------- */
+
+    .img-galeria {
+        width: 80%;                
+        margin-bottom: 20px;       
+    }
+    .titulo{
+        font-size: 1.5rem;
+    }
+
+/*---------------------------------- cv -------------------------------- */
+
+    .cv {
+        flex-direction: column;    
+        padding: 2rem 1rem;        
+        height: auto;
+    }
+    .foto, .fotocv {
+        width: 80%;                
+        margin: auto;       
+    }
+
+/*---------------------------------- contacto -------------------------------- */
+
+    .caja-iconos {    
+        align-items: center;       
+        font-size: 1rem;
+        margin-bottom: 0;
+    }
+    span{
+        padding: 1rem;
+    }
+}
