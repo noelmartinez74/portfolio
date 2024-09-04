@@ -246,7 +246,7 @@ p {
 
 @media (max-width: 768px) {
     header {
-        height: auto;              
+        height: 59rem;              
         font-size: 1rem;         
         padding: 2rem 1rem;        
     }
@@ -261,7 +261,7 @@ p {
     h1{
         width: 100%;
         line-height: 4rem;
-        padding-top: 10rem;
+        padding-top: 20rem;
         padding-bottom: 7rem;
         text-align: center;
     }
